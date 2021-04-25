@@ -118,7 +118,7 @@ nav.sticky .menu-btn{
 .home{
     height:100vh;
     width:100%;
-    background:url("images/akshat4.jpeg") no-repeat;
+    background:url("images/Home.jpeg") no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -237,42 +237,53 @@ section{
   }
  /* Qualifications CSS */
 
-.qualifications{
-    background:#f0f8ff;
-  }
-  .qualifications .content{
-    padding:40px 0;
-  }
-  .qualifications .qualification-details{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .qualification-details .text{
-    width:50%;
-  }
-  .qualification-details p{
-    color:var(--black-color);
-    text-align: justify;
-  }
-  .qualification-details .boxes{
-    width:45%;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
-  }
-  .qualification-details .box{
-    width:calc(100% / 2 - 20px);
-    margin:20px 0;
-  }
-  .qualification-details .boxes .topic{
-    font-size: 20px;
-    color:var(--primary-color);
-  }
-  .qualification-details .boxes .per{
-    font-size: 60px;
-    color:var(--primary-color);
-  }
+ .qualifications{
+  background:#f0f8ff;
+}
+.qualifications .content{
+  padding:40px 0;
+}
+.qualifications .qualification-details{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.qualification-details .text{
+  width:50%;
+}
+.qualification-details p{
+  color:var(--black-color);
+  text-align: justify;
+}
+.qualification-details .boxes{
+  width:100%;
+  display:grid;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 5rem;
+  align-items: center;
+  text-align: center;
+  margin-top: 3rem;
+}
+.qualification-details .box{
+ text-align: center;
+ border-radius: 12px;
+ padding:30px 10px;
+ box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+ cursor:default;
+ transition: all 0.4s ease;
+ width: 100%;
+}
+.qualification-details .boxes .box .topic{
+  font-size: 20px;
+  color:var(--primary-color);
+}
+.qualification-details .boxes .box .per{
+  font-size: 60px;
+  color:var(--primary-color);
+}
+
   /* Hobbies CSS */
 .hobbies .boxes{
     display:flex; 
