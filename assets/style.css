@@ -236,7 +236,6 @@ section{
     color:var(--primary-color);
   }
  /* Qualifications CSS */
-
  .qualifications{
   background:#f0f8ff;
 }
@@ -255,37 +254,43 @@ section{
   color:var(--black-color);
   text-align: justify;
 }
+.qualifications .qualification-details .experience{
+  display:flex;
+  align-items: center;
+  margin:0 10px;
+}
+.qualification-details .experience .num{
+  color:var(--black-color);
+  font-size: 80px;
+}
+.qualification-details .experience .exp{
+  color:var(--black-color);
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  margin:0 6px;
+}
 .qualification-details .boxes{
-  width:100%;
-  display:grid;
+  width:45%;
+  display:flex;
   flex-wrap: wrap;
   justify-content:space-between;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 5rem;
-  align-items: center;
-  text-align: center;
-  margin-top: 3rem;
 }
 .qualification-details .box{
- text-align: center;
- border-radius: 12px;
- padding:30px 10px;
- box-shadow: 0 5px 10px rgba(0,0,0,0.12);
- cursor:default;
- transition: all 0.4s ease;
- width: 100%;
+  width:calc(100% / 2 - 20px);
+  margin:20px 0;
 }
-.qualification-details .boxes .box .topic{
+.qualification-details .boxes .topic{
   font-size: 20px;
   color:var(--primary-color);
 }
-.qualification-details .boxes .box .per{
+.qualification-details .boxes .per{
   font-size: 60px;
-  color:var(--primary-color);
+  color:var(--primary-colqualifications);
 }
-
   /* Hobbies CSS */
-.hobbies .boxes{
+   
+ .hobbies .boxes{
     display:flex; 
     flex-wrap: wrap;
     justify-content:space-between;
@@ -357,132 +362,130 @@ footer{
   footer .text span a:hover{
     text-decoration: underline;
   }
-  /* Scroll To Top Button CSS */
-  .scroll-button a{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    color:var(--white-color);
-    background:var(--primary-color);
-    padding:10px 12px;
-    font-size: 18px;
-    border-radius: 6px;
-    box-shadow: rgba(0,0,0,0.15);
-    display:none;
-  }
-  /* Responsive Media Queries */
+ /* Scroll To Top Button CSS */
+.scroll-button a{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  color:var(--white-color);
+  background:var(--primary-color);
+  padding:10px 12px;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0,0,0,0.15);
+  display:none;
+}
+/*Responsive Media Queries*/
+
 @media (max-width:1190px){
-    section .content{
-      width:85%;
-    }
+  section .content{
+    width: 85%;
   }
-  @media (max-width:1000px){
-    .about .about-details{
-      justify-content: center;
-      flex-direction: column;
-    }
-    .about .about-details .left{
-      display: flex;
-      justify-content:center;
-      width:100%;
-    }
-    .about .about-details .right{
-      width:90%;
-      margin:40px 0;
-    }
-    .services .boxes .box{
-      margin:20px 0;
-      width:calc(100% / 2 - 20px);
-    }
+}
+@media (max-width:1000px){
+  .about .about-details{
+    justify-content: center;
+    flex-direction: column;
   }
-  @media (max-width:900px){
-    .about .left img{
-      height:350px;
-      width:350px;
-    }
+ .about .about-details .left{
+  display: flex;
+  justify-content: center;
+  width: 100%;
   }
-  @media (max-width:750px){
-     nav .navbar{
-       width:90%;
-     }
-     nav .navbar .menu{
-       position:fixed;
-       left:-100%;
-       top:0;
-       background:var(--primary-color);
-       height:100vh;
-       max-width: 400px;
-       width:100%;
-       padding-top:60px;
-       flex-direction: column;
-       align-items:center;
-       transition: all 0.5s ease;
-     }
-     .navbar.active .menu{
-       left:0;
-     }
-     nav .navbar .menu a{
-       font-size:23px;
-       display:block;
-       color:var(--white-color);
-       margin:10px 0;
-     }
-     nav.sticky .menu a:hover{
-       color:var(--primary-color);
-     }
-     nav .navbar .media-icons{
-       display:none;
-     }
-     nav .menu-btn,
-     .navbar .menu .cancel-btn{
-       display:block;
-     }
-  
-     .home .text-two{
-       font-size: 65px;
-     }
-     .home .text-three{
-      font-size: 35px;
-    }
-  
-    .skills .skills-details{
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-    .skills-details .text{
-      width:100%;
-      margin-bottom:50px;
-    }
-    .skills-details .boxes{
-      justify-content:center;
-      align-items: center;
-      width:100%;
-    }
-  
-    .services .boxes .box{
-      margin:20px 0; 
-      width:100%;
-    }
-  
-    .contact .text{
-      width:100%;
-    }
+ .about .about-details .right{
+  width: 90%;
+  margin: 40px 0;
+ }
+ .qualifications .boxes.box{
+  margin: 20px 0;
+  width:calc(100% / 2 - 20px);
+ }
+}
+@media(max-width:900px){
+  .about .left img{
+    height: 350px;
+    width: 350px;
   }
-  
-  @media (max-width:500px){
-    .home .text-two{
-      font-size: 55px;
-    }
-    .home .text-three{
-      font-size: 33px;
-    }
-  
-    .skills-details .boxes .per{
-      font-size: 50px;
-      color:var(--primary-color);
-    }
+}
+@media(max-width:750px){
+  nav .navbar{
+    width: 90%;
+  }
+  nav .navbar .menu{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: var(--primary-color);
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+  .navbar .active .menu{
+    left: 0;
+  }
+  nav .navbar .menu a{
+    font-size: 23px;
+    display: block;
+    color: var(--white-color);
+    margin: 10px 0;
+  }
+  nav .sticky .menu a:hover{
+    color: var(--primary-color);
+  }
+  nav .navbar .media-icons{
+    display: none;
+  }
+  nav .menu-btn,
+   .navbar .menu .cancel-btn{
+     display: block;
+   }
+
+   .home .text-two{
+     font-size: 65px;
+   }
+   .home .text-three{
+    font-size: 35px;
   }
 
+  .qualifications .qualification-details{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .qualification-details .text{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .qualification-details .boxes{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 
+  .hobbies .boxes .box{
+    margin: 20px;
+    width: 100%;
+  }
 
+  .contact .text{
+    width: 100%;
+  }
+}
+
+@media (max-width:500px){
+  .home .text-two{
+    font-size: 55px;
+  }
+  .home .text-three{
+    font-size: 33px;
+  }
+
+  .qualification-details .boxes .per{
+    font-size: 50px;
+    color:var(--primary-color);
+  }
+}
